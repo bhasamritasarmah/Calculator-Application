@@ -7,6 +7,7 @@
 #include "CalculatorApplication.h"
 #include "CalculatorApplicationDlg.h"
 #include "afxdialogex.h"
+#include "../CalculatorOperations/COperations.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -52,19 +53,43 @@ END_MESSAGE_MAP()
 
 CCalculatorApplicationDlg::CCalculatorApplicationDlg(CWnd* pParent /*=nullptr*/)
 	: CDialogEx(IDD_CALCULATORAPPLICATION_DIALOG, pParent)
+	, EditResult(_T(""))
 {
+	flag = true;
+	num1 = num2 = result = 0;
+	str1 = _T("");
+	str2 = _T("");
+	op = _T("");
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 }
 
 void CCalculatorApplicationDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
+	DDX_Text(pDX, IDC_EDIT1, EditResult);
 }
 
 BEGIN_MESSAGE_MAP(CCalculatorApplicationDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_BN_CLICKED(IDC_B0, &CCalculatorApplicationDlg::OnBnClickedB0)
+	ON_BN_CLICKED(IDC_B1, &CCalculatorApplicationDlg::OnBnClickedB1)
+	ON_BN_CLICKED(IDC_B2, &CCalculatorApplicationDlg::OnBnClickedB2)
+	ON_BN_CLICKED(IDC_B3, &CCalculatorApplicationDlg::OnBnClickedB3)
+	ON_BN_CLICKED(IDC_B4, &CCalculatorApplicationDlg::OnBnClickedB4)
+	ON_BN_CLICKED(IDC_B5, &CCalculatorApplicationDlg::OnBnClickedB5)
+	ON_BN_CLICKED(IDC_B6, &CCalculatorApplicationDlg::OnBnClickedB6)
+	ON_BN_CLICKED(IDC_B7, &CCalculatorApplicationDlg::OnBnClickedB7)
+	ON_BN_CLICKED(IDC_B9, &CCalculatorApplicationDlg::OnBnClickedB9)
+	ON_BN_CLICKED(IDC_B_DOT, &CCalculatorApplicationDlg::OnBnClickedBDot)
+	ON_BN_CLICKED(IDC_B_PLUS, &CCalculatorApplicationDlg::OnBnClickedBPlus)
+	ON_BN_CLICKED(IDC_B_MINUS, &CCalculatorApplicationDlg::OnBnClickedBMinus)
+	ON_BN_CLICKED(IDC_B_STAR, &CCalculatorApplicationDlg::OnBnClickedBStar)
+	ON_BN_CLICKED(IDC_B_SLASH, &CCalculatorApplicationDlg::OnBnClickedBSlash)
+	ON_BN_CLICKED(IDC_B_EQUAL, &CCalculatorApplicationDlg::OnBnClickedBEqual)
+	ON_BN_CLICKED(IDC_B_CLEAR, &CCalculatorApplicationDlg::OnBnClickedBClear)
+	ON_BN_CLICKED(IDC_B8, &CCalculatorApplicationDlg::OnBnClickedB8)
 END_MESSAGE_MAP()
 
 
@@ -152,4 +177,293 @@ HCURSOR CCalculatorApplicationDlg::OnQueryDragIcon()
 {
 	return static_cast<HCURSOR>(m_hIcon);
 }
+
+
+
+void CCalculatorApplicationDlg::OnBnClickedB0()
+{
+	// TODO: Add your control notification handler code here
+	if (flag == true)
+	{
+		str1 += _T("0");
+		EditResult = str1;
+	}
+	else
+	{
+		str2 += _T("0");
+		EditResult = str2;
+	}
+	UpdateData(false);
+}
+
+
+void CCalculatorApplicationDlg::OnBnClickedB1()
+{
+	// TODO: Add your control notification handler code here
+	if (flag == true)
+	{
+		str1 += _T("1");
+		EditResult = str1;
+	}
+	else
+	{
+		str2 += _T("1");
+		EditResult = str2;
+	}
+	UpdateData(false);
+}
+
+
+void CCalculatorApplicationDlg::OnBnClickedB2()
+{
+	// TODO: Add your control notification handler code here
+	if (flag == true)
+	{
+		str1 += _T("2");
+		EditResult = str1;
+	}
+	else
+	{
+		str2 += _T("2");
+		EditResult = str2;
+	}
+	UpdateData(false);
+}
+
+
+void CCalculatorApplicationDlg::OnBnClickedB3()
+{
+	// TODO: Add your control notification handler code here
+	if (flag == true)
+	{
+		str1 += _T("3");
+		EditResult = str1;
+	}
+	else
+	{
+		str2 += _T("3");
+		EditResult = str2;
+	}
+	UpdateData(false);
+}
+
+
+void CCalculatorApplicationDlg::OnBnClickedB4()
+{
+	// TODO: Add your control notification handler code here
+	if (flag == true)
+	{
+		str1 += _T("4");
+		EditResult = str1;
+	}
+	else
+	{
+		str2 += _T("4");
+		EditResult = str2;
+	}
+	UpdateData(false);
+}
+
+
+void CCalculatorApplicationDlg::OnBnClickedB5()
+{
+	// TODO: Add your control notification handler code here
+	if (flag == true)
+	{
+		str1 += _T("5");
+		EditResult = str1;
+	}
+	else
+	{
+		str2 += _T("5");
+		EditResult = str2;
+	}
+	UpdateData(false);
+}
+
+
+void CCalculatorApplicationDlg::OnBnClickedB6()
+{
+	// TODO: Add your control notification handler code here
+	if (flag == true)
+	{
+		str1 += _T("6");
+		EditResult = str1;
+	}
+	else
+	{
+		str2 += _T("6");
+		EditResult = str2;
+	}
+	UpdateData(false);
+}
+
+
+void CCalculatorApplicationDlg::OnBnClickedB7()
+{
+	// TODO: Add your control notification handler code here
+	if (flag == true)
+	{
+		str1 += _T("7");
+		EditResult = str1;
+	}
+	else
+	{
+		str2 += _T("7");
+		EditResult = str2;
+	}
+	UpdateData(false);
+}
+
+
+void CCalculatorApplicationDlg::OnBnClickedB8()
+{
+	// TODO: Add your control notification handler code here
+	if (flag == true)
+	{
+		str1 += _T("8");
+		EditResult = str1;
+	}
+	else
+	{
+		str2 += _T("8");
+		EditResult = str2;
+	}
+	UpdateData(false);
+}
+
+
+void CCalculatorApplicationDlg::OnBnClickedB9()
+{
+	// TODO: Add your control notification handler code here
+	if (flag == true)
+	{
+		str1 += _T("9");
+		EditResult = str1;
+	}
+	else
+	{
+		str2 += _T("9");
+		EditResult = str2;
+	}
+	UpdateData(false);
+}
+
+
+void CCalculatorApplicationDlg::OnBnClickedBDot()
+{
+	// TODO: Add your control notification handler code here
+	if (flag == true)
+	{
+		str1 += _T(".");
+		EditResult = str1;
+	}
+	else
+	{
+		str2 += _T(".");
+		EditResult = str2;
+	}
+	UpdateData(false);
+}
+
+
+void CCalculatorApplicationDlg::OnBnClickedBPlus()
+{
+	// TODO: Add your control notification handler code here
+	if (EditResult != _T(""))
+	{
+		num1 = _ttof(EditResult);
+		op = _T("+");
+		flag = !flag;
+		EditResult = _T("");
+	}
+}
+
+
+void CCalculatorApplicationDlg::OnBnClickedBMinus()
+{
+	// TODO: Add your control notification handler code here
+	if (EditResult != _T(""))
+	{
+		num1 = _ttof(EditResult);
+		op = _T("-");
+		flag = !flag;
+		EditResult = _T("");
+	}
+}
+
+
+void CCalculatorApplicationDlg::OnBnClickedBStar()
+{
+	// TODO: Add your control notification handler code here
+	if (EditResult != _T(""))
+	{
+		num1 = _ttof(EditResult);
+		op = _T("*");
+		flag = !flag;
+		EditResult = _T("");
+	}
+}
+
+
+void CCalculatorApplicationDlg::OnBnClickedBSlash()
+{
+	// TODO: Add your control notification handler code here
+	if (EditResult != _T(""))
+	{
+		num1 = _ttof(EditResult);
+		op = _T("/");
+		flag = !flag;
+		EditResult = _T("");
+	}
+}
+
+
+void CCalculatorApplicationDlg::OnBnClickedBEqual()
+{
+	// TODO: Add your control notification handler code here
+	if (EditResult != _T(""))
+	{
+		num2 = _ttof(EditResult);
+		flag = !flag;
+		EditResult = _T("");
+	}
+
+	COperations operations;
+	if (op == _T("+"))
+	{
+		result = operations.add(num1, num2);
+	}
+	else if (op == _T("-"))
+	{
+		result = operations.subtract(num1, num2);
+	}
+	else if (op == _T("*"))
+	{
+		result = operations.multiply(num1, num2);
+	}
+	else if (op == _T("/"))
+	{
+		result = operations.divide(num1, num2);
+	}
+	else
+	{
+		result = num1;
+	}
+
+	EditResult.Format(_T("%.2f"), result);
+	UpdateData(false);
+	str1 = _T("");
+	str2 = _T("");
+}
+
+
+void CCalculatorApplicationDlg::OnBnClickedBClear()
+{
+	// TODO: Add your control notification handler code here
+	EditResult = _T("");
+	UpdateData(false);
+}
+
+
 

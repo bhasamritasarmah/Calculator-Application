@@ -209,6 +209,11 @@
   <ItemGroup>
     <Image Include="res\CalculatorApplication.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CalculatorOperations\CalculatorOperations.vcxproj">
+      <Project>{ef77faf4-72e1-41df-9ec0-9f6c577cde46}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
