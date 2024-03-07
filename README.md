@@ -26,4 +26,26 @@ P.S. The commits are done in a way so that it is easier to see the changes done 
 ![alt text](<Images/Screenshot (235).png>)
 
 5. The MFC project opens up. You can click the 'Local Windows Debugger' button to run the project and see it's default behaviour.
+
 ![alt text](<Images/Screenshot (236).png>)
+
+
+# Steps Taken to Create DLL Project Inside the Same Solution
+
+1. Right click on "Solution 'CalculatorApplication' (1 of 1 project)". In the menu, go to 'Add' and then click on 'New Project...'.
+
+![alt text](<Images/Screenshot (237).png>)
+
+2. In the 'Add a new project' window that appears, select 'Dynamic-Link Library (DLL)' and click on 'Next'.
+
+![alt text](<Images/Screenshot (238).png>)
+
+3. In the 'Configure your new project' window, provide a relevant 'Project name' and select the desired 'Location'. It should ideally be in the same folder as the MFC project.
+
+![alt text](<Images/Screenshot (240).png>)
+
+4. The new project is created.
+
+![alt text](<Images/Screenshot (239).png>)
+
+ 
