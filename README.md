@@ -70,3 +70,11 @@ Visual Studio Community Edition 2022
 2. In the 'Add Class' dialog box that appears, add a desired name in 'Class name' and click 'OK'. A .h and a .cpp file will be created. 
 
 ![alt text](<Images/Screenshot (245).png>)
+
+
+# Resources Used
+
+1. [MFC Playlist](https://www.youtube.com/watch?v=awT-e2zxBUQ&list=PLbbMKXzfxUBTB06Pvc2lXxCUqX6z0hwNi)
+2. [Making a Calculator Application using MFC](https://www.youtube.com/watch?v=r0p6bTs_8Pg&pp=ygUWbWZjIG1pY3Jvc29mdCB0dXRvcmlhbA%3D%3D)
+3. [Linking a DLL project with a dialog-based MFC Project](https://www.youtube.com/watch?v=z9x3anC3ruw&t)
+4. [Creating a registry key with given details](https://chat.openai.com/share/eec5b30b-e60c-4e97-9a5d-6794a91fada8)
