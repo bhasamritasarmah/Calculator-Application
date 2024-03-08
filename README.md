@@ -1,12 +1,10 @@
+# The Calculator Application in Work
+<video controls src="Video/CalculatorApplicationVideo.mp4" title="Title"></video>
+
+
 # Main Software Tool Used to Make This Project
 Visual Studio Community Edition 2022
 
-# Content in each Commit
-1. 1st Commit: Contains the default MFC Dialog based project.
-
-<p>
-P.S. The commits are done in a way so that it is easier to see the changes done to build the project.
-</p>
 
 # Steps Taken to Create MFC App
 1. Open Visual Studio 2022. On the default page that shows up, click on 'Create a New Project'.
@@ -48,4 +46,28 @@ P.S. The commits are done in a way so that it is easier to see the changes done 
 
 ![alt text](<Images/Screenshot (239).png>)
 
- 
+
+# Steps Taken to Link the Two Projects
+
+1. Right click on the Solution and click on 'Properties'. In the 'Project Dependencies' section, select 'CalculatorApplication' under 'Projects' dropdown. And tick 'CalculatorOperations' under the 'Depends on:'. This will tell Visual Studio that the 'CalculatorApplication' project depends on 'CalculatorOperations' project. And hence, 'CalculatorOperations' will be built before 'CalculatorApplication' project.
+
+![alt text](<Images/Screenshot (243).png>)
+
+2. Right click on 'References' under 'CalculatorApplication' project and click on 'Add Reference...' on the menu. 
+
+![alt text](<Images/Screenshot (241).png>)
+
+3. On the dialog box, under 'Projects' section, tick the 'CalculatorOperations'. This will tell Visual Studio that 'CalculatorApplication' project references 'CalculatorOperations' project. 
+
+![alt text](<Images/Screenshot (242).png>)
+
+
+# Steps to Create COperations Class Under 'CalculatorOperations' Project
+
+1. Right click on 'CalculatorOperations' project. Under 'Add' in the menu, select 'Class...'.
+
+![alt text](<Images/Screenshot (244).png>)
+
+2. In the 'Add Class' dialog box that appears, add a desired name in 'Class name' and click 'OK'. A .h and a .cpp file will be created. 
+
+![alt text](<Images/Screenshot (245).png>)
