@@ -1,6 +1,5 @@
 # The Calculator Application in Work
-<video controls src="Video/CalculatorApplicationVideo.mp4" title="Title"></video>
-
+[Calculator Application Video](<Video/CalculatorApplicationVideo.mp4>)
 
 # Main Software Tool Used to Make This Project
 Visual Studio Community Edition 2022
