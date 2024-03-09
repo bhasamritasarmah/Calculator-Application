@@ -1,5 +1,7 @@
 # The Calculator Application in Work
-[Calculator Application Video](<Video/CalculatorApplicationVideo.mp4>)
+[Calculator Application Video](https://drive.google.com/file/d/17slP3UCp9NvIq7JN6CVIvA_hdrBiMib6/view?usp=sharing)
+<video controls src="Video/CalculatorApplicationVideo.mp4" title="Title"></video>
+
 
 # Main Software Tool Used to Make This Project
 Visual Studio Community Edition 2022
@@ -26,6 +28,11 @@ Visual Studio Community Edition 2022
 
 ![alt text](<Images/Screenshot (236).png>)
 
+# What is a DLL?
+
+DLL stands for dynamic-link libray. It is a file type that can contain data, file and resources that can be shared between multiple programs and can be used by more than one program at the same time. It is mostly used by larger programs to handle what may not be a core function of the original program. 
+
+The use of DLLs helps promote modularization of code, code reuse, efficient memory usage, and reduced disk space. 
 
 # Steps Taken to Create DLL Project Inside the Same Solution
 
@@ -206,9 +213,10 @@ LONG RegSetValueEx(
 1. [MFC Playlist](https://www.youtube.com/watch?v=awT-e2zxBUQ&list=PLbbMKXzfxUBTB06Pvc2lXxCUqX6z0hwNi)
 2. [Making a Calculator Application using MFC](https://www.youtube.com/watch?v=r0p6bTs_8Pg&pp=ygUWbWZjIG1pY3Jvc29mdCB0dXRvcmlhbA%3D%3D)
 3. [Linking a DLL project with a dialog-based MFC Project](https://www.youtube.com/watch?v=z9x3anC3ruw&t)
-4. [Creating a registry key with given details](https://chat.openai.com/share/eec5b30b-e60c-4e97-9a5d-6794a91fada8)
+4. [Creating a registry key with given details](https://chat.openai.com/share/d72dab72-0ef7-4bc4-98dd-516c43d84f74)
 5. [About Windows Registry](https://en.wikipedia.org/wiki/Windows_Registry)
 6. [About RegCreateKeyEx](https://learn.microsoft.com/en-us/previous-versions/ms961347(v=msdn.10))
 7. [About RegCreateKeyExA](https://learn.microsoft.com/en-us/windows/win32/api/winreg/nf-winreg-regcreatekeyexa)
 8. [About Registry Key Security and Access Rights](https://learn.microsoft.com/en-us/windows/win32/sysinfo/registry-key-security-and-access-rights)
 9. [About RegSetValueEx](https://learn.microsoft.com/en-us/previous-versions/ms942534(v=msdn.10))
+10. [About DLL](https://learn.microsoft.com/en-us/troubleshoot/windows-client/setup-upgrade-and-drivers/dynamic-link-library)
