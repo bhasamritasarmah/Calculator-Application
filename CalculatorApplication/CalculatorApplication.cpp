@@ -103,27 +103,5 @@ BOOL CCalculatorApplicationApp::InitInstance()
 	// Since the dialog has been closed, return FALSE so that we exit the
 	//  application, rather than start the application's message pump.
 	return FALSE;
-
-	HKEY hKey;
-	LONG keyCreation = RegCreateKeyEx(HKEY_CURRENT_USER, _T("Software\\CalculatorApplication"), 0, NULL, REG_OPTION_NON_VOLATILE, KEY_WRITE, NULL, &hKey, NULL);
-	if (keyCreation != ERROR_SUCCESS)
-	{
-		// In case of error in opening/creating registry key.
-		return FALSE;
-	}
-
-	// Set button style value in the registry.
-	DWORD buttonStyle = 0;		// Default to CButton style.
-	keyCreation = RegSetValueEx(hKey, _T("UseCButton"), 0, REG_DWORD, (BYTE*)&buttonStyle, sizeof(DWORD));
-	if (keyCreation != ERROR_SUCCESS)
-	{
-		//In case of error setting the registry value.
-		RegCloseKey(hKey);
-		return FALSE;
-	}
-
-	RegCloseKey(hKey);
-
-	return TRUE;
 }
 
